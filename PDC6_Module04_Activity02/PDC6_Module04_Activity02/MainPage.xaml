@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC6_Module04_Activity02.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3"
+               Padding="24"
+               CornerRadius="0">
+            <Label Text="Personal Information"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+        </Frame>
+
+        <AbsoluteLayout Margin="0, 10, 0, 0">
+            <Label Text="Name"
+                   Margin="15, 0, 0, 0"
+                   FontAttributes="bold"
+                   TextColor="Red"></Label>
+            <Label Margin="14, 15, 0, 0"
+                   HorizontalOptions="FillAndExpand"
+                   Text="Marc Lester Z. Mallari"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="17"
+                   FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True"
+                                           DragStarting="DragGestureRecognizer_DragStarting"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Course"
+                   Margin="15, 50, 0, 0"
+                   FontAttributes="bold"
+                   TextColor="Red"></Label>
+            <Label Margin="15, 65, 0, 0"
+                   HorizontalOptions="FillAndExpand"
+                   Text="Bachelor of Science in Information Technology"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="17"
+                   FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True" 
+                                           DragStarting="DragGestureRecognizer_DragStarting"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text="Drag Label Here"
+                   Margin="15, 100, 0, 0"
+                   FontAttributes="bold"
+                   TextColor="Red"></Label>
+            <Frame Margin="15, 120, 0, 0" 
+                   HorizontalOptions="FillAndExpand" 
+                   WidthRequest="340" 
+                   CornerRadius="10">
+                <Frame.GestureRecognizers>
+                    <DropGestureRecognizer AllowDrop="True" 
+                                           Drop="DropGestureRecognizer_Drop"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+        </AbsoluteLayout>
+    </StackLayout>
+</ContentPage>
